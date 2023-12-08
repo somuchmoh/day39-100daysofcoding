@@ -25,5 +25,3 @@ class FlightData:
         flight_response = requests.get(url=FLIGHT_URL, headers=flight_header, params=flight_data)
         results = flight_response.json()
         return results
-
-

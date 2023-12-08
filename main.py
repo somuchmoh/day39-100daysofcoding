@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from notification_manager import NotificationManager
 
 data = DataManager()
-sheet_data = data.prices
+sheet_data = data.get_destination_data()
 flight_search = FlightSearch()
 flight_data = FlightData()
 notif = NotificationManager()

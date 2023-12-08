@@ -11,8 +11,7 @@ class NotificationManager:
     def send_notif(self, price, city_to, iata_code, from_date, to_date):
         client = Client(TWILIO_ACC_SID, TWILIO_AUTH_TOKEN)
         message = client.messages.create(
-            body= f"Low Price Alert!✈️ Only ₹{price} to fly from Bangalore-BLR to {city_to}-{iata_code}, "
-                  f"from {from_date} to {to_date} ",
+            body=f"Low Price Alert!✈️ Only ₹{price} to fly from Bangalore-BLR to {city_to}-{iata_code}, from {from_date} to {to_date}",
             from_=TWILIO_NUM,
             to=MY_NUM
         )
